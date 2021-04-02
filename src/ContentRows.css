@@ -1,0 +1,15 @@
+.content-rows{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* background-color: #191919; */
+  color: #fff;
+}
+.row-item{
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+  margin-top: 20px;
+  background-color: #191919;
+}
