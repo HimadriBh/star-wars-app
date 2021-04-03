@@ -9,7 +9,6 @@ import Item from './Item'
 
 function ContentRows(props) {
   const location = useLocation()
-  console.log(props.data)
   useEffect(() => {
     if(location.pathname.split('/')[1]){
       props.clearSearch()
@@ -20,12 +19,12 @@ function ContentRows(props) {
     return () => {
       // cleanup
     }
-  }, [props, location])
+  }, [location])
   return (
     <div className="content-rows">
-      {props.data ? props.data.map(item => (
+      {props.data ? props.data.map((item, index) => (
         // <h1>{JSON.stringify(item)}</h1>
-        <Item item={item}  />
+        <Item item={item} key={index}  />
       )) : <h3>Search...</h3>}
     </div>
   )
